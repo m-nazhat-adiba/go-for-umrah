@@ -16,6 +16,8 @@ function Register() {
   const [payload, setPayload] = useState({ status: null, soft_delete: 0 });
   const router = useRouter();
 
+  const userRegister = useRegister();
+
   const { register, handleSubmit, errors } = useForm();
 
   const handleSubmitEmail = (data) => {
@@ -41,7 +43,7 @@ function Register() {
 
   const handleRegister = async (data) => {
     const updatedPayload = { ...payload, ...data };
-    const response = await useRegister(updatedPayload);
+    const response = await userRegister(updatedPayload);
 
     if (response.status_code === 200) {
       router.push("/register/verify");
