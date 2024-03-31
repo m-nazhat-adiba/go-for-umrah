@@ -1,4 +1,3 @@
-// verification.js (or verify-account.js) in the pages directory
 "use client";
 
 import { useSearchParams } from "next/navigation"; // Import useRouter from next/navigation

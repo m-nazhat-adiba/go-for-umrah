@@ -7,6 +7,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.resolve(__dirname, "styles")],
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default nextConfig;
