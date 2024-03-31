@@ -18,10 +18,10 @@ const RegisterDetails = ({
 
   const onSubmit = (data) => {
     const payload = {
-      firstName: data.firstName,
-      lastName: data.lastName,
-      userName: data.userName,
-      phoneNumber: `${region}${data.phoneNumber}`,
+      firstname: data.firstName,
+      lastname: data.lastName,
+      username: data.userName,
+      phone: `${region}${data.phoneNumber}`,
     };
     handleProgress(payload);
   };

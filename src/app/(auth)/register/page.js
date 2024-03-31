@@ -9,10 +9,11 @@ import RegisterPassword from "./_container/RegisterPassword";
 import AuthFormImage from "@/components/layout/AuthFormImage";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { useRegister } from "@/hooks/useRegister";
 
 function Register() {
   const [progress, setProgress] = useState(1);
-  const [payload, setPayload] = useState({});
+  const [payload, setPayload] = useState({ status: null, soft_delete: 0 });
   const router = useRouter();
 
   const { register, handleSubmit, errors } = useForm();
@@ -38,12 +39,13 @@ function Register() {
     setProgress(progress - 1);
   };
 
-  const handleRegister = (data) => {
-    setPayload((prevState) => ({
-      ...prevState,
-      ...data,
-    }));
-    // auth
+  const handleRegister = async (data) => {
+    const updatedPayload = { ...payload, ...data };
+    const response = await useRegister(updatedPayload);
+
+    if (response.status_code === 200) {
+      router.push("/register/verify");
+    }
   };
 
   const handleSwitchLogin = () => {
