@@ -15,13 +15,15 @@ function Login() {
   const [progress, setProgress] = useState(1);
   const [payload, setPayload] = useState({});
 
+  const userLogin = useLogin();
+
   const router = useRouter();
 
   const { register, handleSubmit, errors } = useForm();
 
   const handleLogin = async (data) => {
     const updatedPayload = { ...payload, ...data };
-    const response = await useLogin(updatedPayload);
+    const response = await userLogin(updatedPayload);
 
     if (response.status_code === 200) {
       router.push("/dashboard");
