@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_HOST = "https://illiyin.goforumrah.com/api";
+const API_HOST = process.env.NEXT_PUBLIC_API_URL;
 
 export const useRegister = async (payload) => {
   try {
