@@ -9,19 +9,23 @@ import LoginPassword from "./_container/LoginPassword";
 import AuthFormImage from "@/components/layout/AuthFormImage";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import { useLogin } from "@/hooks/useLogin";
 
 function Login() {
   const [progress, setProgress] = useState(1);
   const [payload, setPayload] = useState({});
 
   const router = useRouter();
+
   const { register, handleSubmit, errors } = useForm();
 
-  const handleLogin = (data) => {
-    setPayload((prevState) => ({
-      ...prevState,
-      ...data,
-    }));
+  const handleLogin = async (data) => {
+    const updatedPayload = { ...payload, ...data };
+    const response = await useLogin(updatedPayload);
+
+    if (response.status_code === 200) {
+      router.push("/dashboard");
+    }
   };
 
   const handleInputEmail = (data) => {

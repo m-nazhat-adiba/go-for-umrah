@@ -1,12 +1,14 @@
-import InputSwitch from "@/components/input/InputSwitch";
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import "@/app/custom.scss";
-import Button from "@/components/button/Button";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <InputSwitch />
-    </div>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push("/login");
+  });
+  return null;
 }
