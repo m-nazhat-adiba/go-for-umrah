@@ -41,6 +41,7 @@ function Register() {
 
   const handleRegister = async (data) => {
     const updatedPayload = { ...payload, ...data };
+    /* eslint-disable-next-line react-hooks/rules-of-hooks */
     const response = await useRegister(updatedPayload);
 
     if (response.status_code === 200) {
