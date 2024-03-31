@@ -29,7 +29,7 @@ function ResetPassword() {
           <header className={`${style.header}`}>
             <h1 className={style.heading}>Forgot your password?</h1>
             <p>
-              Confirm your username and we'll send you a link to reset your
+              Confirm your username and we&apos:ll send you a link to reset your
               password..
             </p>
           </header>
