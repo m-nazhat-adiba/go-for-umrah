@@ -6,6 +6,10 @@ import Button from "../button/Button";
 import { Icon } from "@iconify/react";
 
 const EmailRedirect = () => {
+  const handleRedirectEmail = () => {
+    window.open("https://mail.google.com", "_blank");
+  };
+
   return (
     <div className={`${style.redirectWrapper}`}>
       <Icon
@@ -15,14 +19,14 @@ const EmailRedirect = () => {
       <div>
         <h1>Verify your email address</h1>
         <p>
-          We sent you an email with a verification link to
-          <strong>fahmiauliyarohman@gmail.com.</strong> To confirm your account
+          We sent you an email with a verification link to{" "}
+          <strong>fahmiauliyarohman@gmail.com.</strong> To confirm your account,
           please follow the link in the email we just sent.
         </p>
       </div>
 
       <div className={`${style.buttonWrapper}`}>
-        <Button>Open your email</Button>
+        <Button action={handleRedirectEmail}>Open your email</Button>
       </div>
     </div>
   );
