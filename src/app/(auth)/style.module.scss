@@ -1,0 +1,49 @@
+.wrapper {
+  height: 100vh;
+  position: relative;
+  margin: 0;
+  padding: 0px !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.parent {
+  height: 80px; /* Set a specific height for the parent */
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.box {
+  width: 1px; /* Adjust width as needed */
+  height: 100%; /* Set the height of the box relative to its parent */
+  background-color: #8295a3; /* Adjust background color as needed */
+  border: 1px solid #8295a3; /* Adjust border properties as needed */
+}
+
+.buttonWrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  gap: 32px;
+}
+
+.helpButtonWrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 75px;
+}
+
+.languageButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  p {
+    color: white;
+    margin: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}

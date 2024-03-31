@@ -1,0 +1,37 @@
+// Email Redirect
+.redirectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 630px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 43.2px;
+      text-align: center;
+      margin: 0;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.buttonWrapper {
+  width: 100%;
+  max-width: 548px;
+  display: flex;
+  flex-direction: row;
+}

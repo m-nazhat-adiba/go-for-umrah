@@ -1,0 +1,22 @@
+// Input
+$input-padding-y: 13px;
+$input-padding-x: 16px;
+
+// Button
+$btn-padding-y: 13.5px;
+$btn-font-size: 14px;
+
+// Color
+$primary: #1cb78d;
+$secondary: #9e9e9e;
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+);
+
+strong {
+  color: $primary;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
